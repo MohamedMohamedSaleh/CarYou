@@ -29,6 +29,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   cupertino_icons: ^1.0.6
+  smooth_page_indicator: ^1.2.0+3
   flutter:
     sdk: flutter
   lottie: ^3.1.3

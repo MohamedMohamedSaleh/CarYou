@@ -1,3 +1,4 @@
+import 'package:car_rental/features/onboarding/onboarding_view.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -11,12 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const OnBoardingView(),
     );
   }
 }
@@ -54,6 +56,10 @@ class _MyHomePageState extends State<MyHomePage> {
               'You have pushed the button this many times:',
             ),
             Lottie.asset('assets/lottie/logo.json'),
+            Image.asset(
+              'assets/images/logo.png',
+              height: 100,
+            ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
