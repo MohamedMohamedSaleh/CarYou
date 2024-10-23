@@ -53,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
             const Text(
               'You have pushed the button this many times:',
             ),
-            Lottie.asset('assets/images/logo.json'),
+            Lottie.asset('assets/lottie/logo.json'),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
