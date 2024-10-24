@@ -96,13 +96,14 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                 // paintStyle: PaintingStyle.stroke,
                 strokeWidth: 5,
                 dotColor: Colors.white,
-                activeDotColor: primaryColor,
+                activeDotColor: myPrimaryColor,
               ),
               controller: pageController,
               count: 3,
             ),
           ),
-          CustomNextButton(pageController: pageController , isLastPage: isLastPage),
+          CustomNextButton(
+              pageController: pageController, isLastPage: isLastPage),
         ],
       ),
     );

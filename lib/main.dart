@@ -1,4 +1,5 @@
-import 'package:car_rental/features/onboarding/onboarding_view.dart';
+import 'package:car_rental/core/themes/theming.dart';
+import 'package:car_rental/features/auth/presetation/pages/login_view.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -14,11 +15,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const OnBoardingView(),
+      theme: MyThemes.lightTheme,
+      darkTheme: MyThemes.darkTheme,
+      themeMode: ThemeMode.system,
+      home: const LoginView(),
     );
   }
 }

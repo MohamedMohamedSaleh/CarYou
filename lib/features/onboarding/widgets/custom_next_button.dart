@@ -1,3 +1,5 @@
+import 'package:car_rental/core/helpers/extensions.dart';
+import 'package:car_rental/features/auth/presetation/pages/login_view.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -18,10 +20,14 @@ class CustomNextButton extends StatelessWidget {
       bottom: 100,
       right: 20,
       child: GestureDetector(
-        onTap: () => pageController.nextPage(
-          duration: const Duration(milliseconds: 600),
-          curve: Curves.easeInOut,
-        ),
+        onTap: () {
+          isLastPage
+              ? context.pushReplacement(const LoginView())
+              : pageController.nextPage(
+                  duration: const Duration(milliseconds: 500),
+                  curve: Curves.easeInOut,
+                );
+        },
         child: Container(
           height: 52,
           width: 150,
@@ -37,7 +43,7 @@ class CustomNextButton extends StatelessWidget {
                 height: 52,
                 width: 90,
                 decoration: const BoxDecoration(
-                  color: primaryColor,
+                  color: myPrimaryColor,
                   borderRadius: BorderRadius.all(
                     Radius.circular(11),
                   ),

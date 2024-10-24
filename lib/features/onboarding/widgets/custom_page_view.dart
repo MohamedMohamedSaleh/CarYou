@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class CustomPageView extends StatelessWidget {
@@ -18,18 +17,20 @@ class CustomPageView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Transform.flip(
-          flipX: isRotate,
-          child: Image.asset(
-            'assets/images/$image.jpg',
-            height: double.infinity,
-            width: double.infinity,
-            fit: BoxFit.cover,
-          ),
+         Container(
+      height: double.infinity,
+      width: double.infinity,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/images/$image.jpg'),
+          fit: BoxFit.cover,
         ),
-        Container(
-          color: const Color.fromARGB(87, 0, 0, 0),
-        ),
+        color: const Color.fromARGB(255, 101, 98, 98),
+      ),
+      foregroundDecoration: const BoxDecoration(
+        color: Color.fromARGB(87, 0, 0, 0),
+      ),
+    ),
         title,
         subtitle,
       ],
