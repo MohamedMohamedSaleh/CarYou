@@ -41,6 +41,6 @@ class CustomLogoWidget extends StatelessWidget {
               color: myPrimaryColor,
             ),
           ),
-        ]);
+        ],);
   }
 }

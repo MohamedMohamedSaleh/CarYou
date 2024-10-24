@@ -1,4 +1,5 @@
 import 'package:car_rental/core/constants/my_colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -21,27 +22,34 @@ class CustomBottomNavigationBar extends StatelessWidget {
         bottom: paddingBottom,
         top: 4,
       ),
-      child: Wrap(
-      
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
-          Text(
-            text,
-            style: const TextStyle(
-              fontSize: 15,
-              // color: Theme.of(context).primaryColor,
-              fontWeight: FontWeight.w300,
-            ),
-          ),
-          GestureDetector(
-            onTap: onPress,
-            child: Text(
-              buttonText,
-              style: const TextStyle(
-                fontSize: 15,
-                color: myPrimaryColor,
-                fontWeight: FontWeight.w600,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              FittedBox(
+                child: Text(
+                  text,
+                  style: const TextStyle(
+                    fontSize: 15,
+                    // color: Theme.of(context).primaryColor,
+                    fontWeight: FontWeight.w300,
+                  ),
+                ),
               ),
-            ),
+              GestureDetector(
+                onTap: onPress,
+                child: Text(
+                  buttonText,
+                  style: const TextStyle(
+                    fontSize: 15,
+                    color: myPrimaryColor,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+            ],
           ),
         ],
       ),

@@ -1,16 +1,15 @@
-
 import 'package:flutter/material.dart';
 
 class CustomDividerWidget extends StatelessWidget {
   const CustomDividerWidget({
-    super.key,
+    super.key, required this.text,
   });
-
+  final String text;
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       children: [
-        Expanded(
+        const Expanded(
           child: Divider(
             color: Color.fromARGB(255, 202, 201, 201),
             thickness: 1,
@@ -18,15 +17,14 @@ class CustomDividerWidget extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 10),
           child: Text(
-            "Or Login With",
-            style: TextStyle(
-                fontSize: 15, fontWeight: FontWeight.w400),
+            text,
+            style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
             textAlign: TextAlign.end,
           ),
         ),
-        Expanded(
+        const Expanded(
           child: Divider(
             color: Color.fromARGB(255, 202, 201, 201),
             thickness: 1,

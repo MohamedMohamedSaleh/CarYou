@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class CustomGoogleIconWidget extends StatelessWidget {
@@ -15,13 +14,12 @@ class CustomGoogleIconWidget extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         border: Border.all(
-          color: Colors.grey.shade200, // Outline color
+          color: const Color.fromARGB(255, 213, 212, 212), // Outline color
           width: 2.0, // Outline width
         ),
       ),
       child: Padding(
-        padding:
-            const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+        padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
